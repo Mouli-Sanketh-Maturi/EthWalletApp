@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">EthereumWallet</string>
+    <string name="send_button_label">Send</string>
+    <string name="receive_button_label">Receive</string>
+    <string name="address_label">Address</string>
+    <string name="amount_label">Amount</string>
+    <string name="copy_button_label">Copy Address</string>
+    <string name="transaction_id_label">transaction_id</string>
+    <string name="visit_transaction_button_label">View on Etherscan</string>
+    <string name="eth_price_label">eth_price_text</string>
+    <string name="eth_balance_label">eth_balance_text</string>
+</resources>

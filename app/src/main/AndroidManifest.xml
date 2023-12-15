@@ -25,6 +25,10 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".OnboardActivity"
+            android:label="OnboardActivity"
+            android:theme="@style/Theme.EthereumWallet" />
+        <activity
             android:name=".SendActivity"
             android:label="SendActivity"
             android:theme="@style/Theme.EthereumWallet" />

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <!-- Welcome Message TextView -->
+    <TextView
+        android:id="@+id/text_view_welcome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_message"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="#424242"
+        android:padding="16dp"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Private Key Input CardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_private_key_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:elevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/text_view_welcome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/private_key_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/private_key_label"
+            android:inputType="text"
+            android:textSize="16sp"
+            android:textColor="#424242"
+            android:padding="16dp"
+            android:fontFamily="sans-serif-regular" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Input Private Key Button -->
+    <Button
+        android:id="@+id/button_input_private_key"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/input_private_key_button_label"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#FFFFFF"
+        android:elevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/card_private_key_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginTop="16dp" />
+
+    <!-- Create New Wallet Button -->
+    <Button
+        android:id="@+id/button_create_new_wallet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/create_new_wallet_button_label"
+        android:backgroundTint="#2196F3"
+        android:textColor="#FFFFFF"
+        android:elevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/button_input_private_key"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginTop="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,6 +7,10 @@
     <string name="copy_button_label">Copy Address</string>
     <string name="transaction_id_label">transaction_id</string>
     <string name="visit_transaction_button_label">View on Etherscan</string>
-    <string name="eth_price_label">eth_price_text</string>
-    <string name="eth_balance_label">eth_balance_text</string>
+    <string name="eth_price_label">Fetching current Price</string>
+    <string name="eth_balance_label">Fetching current Balance</string>
+    <string name="welcome_message">Let\'s Get Started!</string>
+    <string name="input_private_key_button_label">Import Wallet</string>
+    <string name="private_key_label">Existing Private Key</string>
+    <string name="create_new_wallet_button_label">Create New Wallet</string>
 </resources>

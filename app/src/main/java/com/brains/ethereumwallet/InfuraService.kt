@@ -1,5 +1,7 @@
 package com.brains.ethereumwallet
 
+import android.content.Context
+import android.widget.Toast
 import okhttp3.Call
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -52,7 +54,7 @@ class InfuraService {
         })
     }
 
-    fun sendTransaction(fromAddress: String, privateKey: String, toAddress: String, amount: String, gasPrice: BigInteger, gasLimit: BigInteger, callback: (String) -> Unit) {
+    fun sendTransaction(fromAddress: String, privateKey: String, toAddress: String, amount: String, gasPrice: BigInteger, gasLimit: BigInteger,context : Context, callback: (String) -> Unit) {
         val credentials = Credentials.create(privateKey)
         val value = Convert.toWei(amount, Convert.Unit.ETHER).toBigInteger()
 
@@ -69,6 +71,9 @@ class InfuraService {
 
         if (transactionData.hasError()) {
             println("Error: ${transactionData.error.message}")
+            context?.let {
+                Toast.makeText(context, "Error: ${transactionData.error.message}", Toast.LENGTH_LONG).show()
+            }
             return
         }
         val transaction = transactionData.transactionHash

@@ -1,6 +1,7 @@
 package com.brains.ethereumwallet
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -22,6 +23,7 @@ class MainActivity : ComponentActivity() {
 
         val sendButton = findViewById<Button>(R.id.button_send)
         val receiveButton = findViewById<Button>(R.id.button_receive)
+        val transactionHistoryButton = findViewById<Button>(R.id.button_transaction_history)
 
         //Set the Ethereum price text view
         InfuraService().getCurrentEthereumPrice { price ->
@@ -53,5 +55,15 @@ class MainActivity : ComponentActivity() {
             val intent = Intent(this, ReceiveActivity::class.java)
             startActivity(intent)
         }
+        transactionHistoryButton.setOnClickListener {
+            // Handle transaction history button click
+            openWebPage("https://sepolia.etherscan.io/address/$publicKey");
+        }
+    }
+
+    private fun openWebPage(url: String) {
+        val webpage = Uri.parse(url)
+        val intent = Intent(Intent.ACTION_VIEW, webpage)
+        startActivity(intent)
     }
 }

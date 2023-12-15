@@ -50,7 +50,7 @@ class SendActivity : ComponentActivity() {
                     privateKey!!,
                     address,
                     amount,
-                    BigInteger("20000000000"),
+                    BigInteger("200000000000"),
                     BigInteger("21000"),
                     this
                 ) { transactionHash ->
